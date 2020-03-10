@@ -50,3 +50,9 @@ board-row:after {
 .game-info {
     margin-left: 20px;
 }
+
+.restart {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+  }

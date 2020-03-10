@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Restart from './Restart';
 
 function Square(props) {
     return (
@@ -30,16 +29,20 @@ class Board extends React.Component {
         this.setState({ squares: squares, xIsNext: !this.state.xIsNext, });
     }
 
+    clearBoard = () => {
+        this.setState({
+            squares: Array(9).fill(null),
+            xIsNext: true,
+        })
+    }
+
     renderSquare(i) {
         return (
             <Square value={this.state.squares[i]} onClick={() => this.handleClick(i)} />
         );
     }
 
-    clearBoard = () => {
-        this.setState ({squares: Array(9).fill(null),
-        xIsNext: true,})
-    }
+
 
     render() {
         const winner = findWinner(this.state.squares);
@@ -50,15 +53,16 @@ class Board extends React.Component {
 
         if (winner) {
             status = 'The winner is ' + winner
-        }  else if (!winner) {
+        } else if (!winner) {
             status = (this.state.xIsNext ? 'X' : 'O') + ', your turn'
-        } else if (this.state.squares.every(isSquareEmpty) && !winner) 
-        {
+        } else if (this.state.squares.every(isSquareEmpty) && !winner) {
             status = "It's a tie!"
         }
 
         return (
             <div>
+                <h1>Tic Tac Toe</h1>
+
                 <div className="status">{status}</div>
                 <div className="board-row">
                     {this.renderSquare(0)}
@@ -75,6 +79,9 @@ class Board extends React.Component {
                     {this.renderSquare(7)}
                     {this.renderSquare(8)}
                 </div>
+                <div className="col-6 restart">
+                    <button type="button" className="btn btn-success" onClick={this.clearBoard}>Restart</button>
+                </div>
             </div>
         );
     }
@@ -84,7 +91,6 @@ class Game extends React.Component {
     render() {
         return (
             <div className="game">
-                <h1>Tic Tac Toe</h1>
                 <div className="game-board">
                     <Board />
                 </div>
@@ -92,7 +98,6 @@ class Game extends React.Component {
                     <div>{/*status */}</div>
                     <ol>{/*TODO*/}</ol>
                 </div>
-                <Restart clearBoardFunc={this.clearBoard} />
             </div>
         );
     }
