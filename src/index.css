@@ -45,6 +45,7 @@ board-row:after {
 .game {
     display: flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .game-info {

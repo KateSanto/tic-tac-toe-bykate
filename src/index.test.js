@@ -1,20 +1,9 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Game from './index';
+const findWinner = require("./index");
 
-it('stops squares from being clicked after a player wins', () => {
- 
-});
-
-/* Started next text. Not finished, so commented out:
-
-it('should call mock function when button is clicked', () => {
-  const mockFn = jest.fn();
-  const tree = shallow(
-    <Button name='Restart' handleClick={mockFn} />
-  );
-  tree.simulate('click');
-  expect(mockFn).toHaveBeenCalled();
-});
-
-*/
+describe("findWinner", () => {
+    test.only("This key function from this game takes the board as it is and says whether noughts or crosses have won", () => {
+        const result = findWinner(["X", "O", "X", "X", "O", "O", "O", "X", "X"]);
+        const expected = "X";
+        expect(result).toBe(expected);
+    })
+})

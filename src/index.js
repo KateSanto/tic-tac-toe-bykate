@@ -44,22 +44,20 @@ class Board extends React.Component {
 
     render() {
         const winner = findWinner(this.state.squares);
-        console.log(this.state.squares[0]);
         let status;
-        let squares = this.state.squares;
-        let isSquareEmpty = (squares) => squares[''] !== null;
-
+        let completedSquares = this.state.squares.filter(square => square !== null)
         if (winner) {
             status = 'The winner is ' + winner
-        } else if (!winner) {
-            status = (this.state.xIsNext ? 'X' : 'O') + ', your turn'
-        } else if (this.state.squares.every(isSquareEmpty) && !winner) {
+        } else if (completedSquares.length === 9 && !winner) {
             status = "It's a tie!"
         }
-
+        else if (!winner) {
+            status = (this.state.xIsNext ? 'X' : 'O') + ', your turn'
+        }
+        console.log(completedSquares);
         return (
             <div>
-                <div className="title"><p><strong>Tic Tac Toe</strong></p></div>
+                <div className="title"><h2>Tic Tac Toe</h2></div>
 
                 <div className="status">{status}</div>
                 <div className="board-row">
@@ -97,7 +95,7 @@ class Game extends React.Component {
                     <div>{/*status */}</div>
                     <ol>{/*TODO*/}</ol>
                 </div>
-                
+
             </div>
         );
     }
