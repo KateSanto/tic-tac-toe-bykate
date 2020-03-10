@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import findWinner from './findWinner';
 
 function Square(props) {
     return (
-        <button className="square" onClick={props.onClick}>
+        <button className="box" onClick={props.onClick}>
             {props.value}
         </button>
     )
@@ -54,29 +55,40 @@ class Board extends React.Component {
         else if (!winner) {
             status = (this.state.xIsNext ? 'X' : 'O') + ', your turn'
         }
-        console.log(completedSquares);
         return (
-            <div>
-                <div className="title"><h2>Tic Tac Toe</h2></div>
+            <div className="container text-center">
+                <div className="title"><h1>Tic Tac Toe</h1></div>
 
                 <div className="status">{status}</div>
-                <div className="board-row">
-                    {this.renderSquare(0)}
-                    {this.renderSquare(1)}
-                    {this.renderSquare(2)}
+                <div className="board">
+                    <div className="row no-gutters">
+                        <div className="col-4 square">
+                            {this.renderSquare(0)}</div>
+                        <div className="col-4 square">
+                            {this.renderSquare(1)}</div>
+                        <div className="col-4 square">
+                            {this.renderSquare(2)}</div>
+                    </div>
+
+                    <div className="row no-gutters">
+                        <div className="col-4 square">
+                            {this.renderSquare(3)}</div>
+                        <div className="col-4 square">
+                            {this.renderSquare(4)}</div>
+                        <div className="col-4 square">
+                            {this.renderSquare(5)}</div>
+                    </div>
+                    <div className="row no-gutters">
+                        <div className="col-4 square">
+                            {this.renderSquare(6)}</div>
+                        <div className="col-4 square">
+                            {this.renderSquare(7)}</div>
+                        <div className="col-4 square">
+                            {this.renderSquare(8)}</div>
+                    </div>
                 </div>
-                <div className="board-row">
-                    {this.renderSquare(3)}
-                    {this.renderSquare(4)}
-                    {this.renderSquare(5)}
-                </div>
-                <div className="board-row">
-                    {this.renderSquare(6)}
-                    {this.renderSquare(7)}
-                    {this.renderSquare(8)}
-                </div>
-                <div className="col-6 restart">
-                    <button type="button" className="btn btn-success" onClick={this.clearBoard}>Restart</button>
+                <div className="restart text-center">
+                    <button type="button" className="btn btn-light btn-lg" onClick={this.clearBoard}>Restart</button>
                 </div>
             </div>
         );
@@ -111,37 +123,3 @@ ReactDOM.render(
 );
 
 
-
-
-function findWinner(squares) {
-    if (squares === undefined) throw new Error("Please make a move");
-    if (squares[0] === squares[1] && squares[0] === squares[2]) {
-        return squares[0];
-    } else if (squares[3] === squares[4] && squares[3] === squares[5]) {
-        return squares[3];
-    } else if (squares[6] === squares[7] && squares[6] === squares[8]) {
-        return squares[6];
-    } else if (squares[0] === squares[3] && squares[0] === squares[6]) {
-        return squares[0];
-    } else if (squares[1] === squares[4] && squares[1] === squares[7]) {
-        return squares[1];
-    } else if (squares[2] === squares[5] && squares[2] === squares[8]) {
-        return squares[2];
-    } else if (squares[0] === squares[4] && squares[0] === squares[8]) {
-        return squares[0];
-    } else if (squares[2] === squares[4] && squares[2] === squares[6]) {
-        return squares[2];
-    } else {
-        return null;
-    }
-
-    //WINNING COMBINATIONS
-    //     [0, 1, 2],
-    // [3, 4, 5],
-    // [6, 7, 8],
-    // [0, 3, 6],
-    // [1, 4, 7],
-    // [2, 5, 8],
-    // [0, 4, 8],
-    // [2, 4, 6],
-}
