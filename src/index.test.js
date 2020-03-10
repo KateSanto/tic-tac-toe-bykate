@@ -2,10 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Game from './index';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Game />, div);
-  ReactDOM.unmountComponentAtNode(div);
+it('stops squares from being clicked after a player wins', () => {
+ 
 });
 
 /* Started next text. Not finished, so commented out:

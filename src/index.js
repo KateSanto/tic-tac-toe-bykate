@@ -42,8 +42,6 @@ class Board extends React.Component {
         );
     }
 
-
-
     render() {
         const winner = findWinner(this.state.squares);
         console.log(this.state.squares[0]);
@@ -61,7 +59,7 @@ class Board extends React.Component {
 
         return (
             <div>
-                <h1>Tic Tac Toe</h1>
+                <div className="title"><p><strong>Tic Tac Toe</strong></p></div>
 
                 <div className="status">{status}</div>
                 <div className="board-row">
@@ -91,6 +89,7 @@ class Game extends React.Component {
     render() {
         return (
             <div className="game">
+
                 <div className="game-board">
                     <Board />
                 </div>
@@ -98,12 +97,13 @@ class Game extends React.Component {
                     <div>{/*status */}</div>
                     <ol>{/*TODO*/}</ol>
                 </div>
+                
             </div>
         );
     }
 }
 
-export default Game;
+export default Game
 
 //==================
 
