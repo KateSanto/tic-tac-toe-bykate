@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/tic-tac-toe-bykate/public/static/css/main.a1e39da0.chunk.css",
-    "main.js": "/tic-tac-toe-bykate/public/static/js/main.c8d1fab6.chunk.js",
-    "main.js.map": "/tic-tac-toe-bykate/public/static/js/main.c8d1fab6.chunk.js.map",
-    "runtime-main.js": "/tic-tac-toe-bykate/public/static/js/runtime-main.5fbcf153.js",
-    "runtime-main.js.map": "/tic-tac-toe-bykate/public/static/js/runtime-main.5fbcf153.js.map",
-    "static/js/2.d60c6668.chunk.js": "/tic-tac-toe-bykate/public/static/js/2.d60c6668.chunk.js",
-    "static/js/2.d60c6668.chunk.js.map": "/tic-tac-toe-bykate/public/static/js/2.d60c6668.chunk.js.map",
-    "index.html": "/tic-tac-toe-bykate/public/index.html",
-    "precache-manifest.308fc79e9f6656ffddf6091ab7a54420.js": "/tic-tac-toe-bykate/public/precache-manifest.308fc79e9f6656ffddf6091ab7a54420.js",
-    "service-worker.js": "/tic-tac-toe-bykate/public/service-worker.js",
-    "static/css/main.a1e39da0.chunk.css.map": "/tic-tac-toe-bykate/public/static/css/main.a1e39da0.chunk.css.map",
-    "static/js/2.d60c6668.chunk.js.LICENSE.txt": "/tic-tac-toe-bykate/public/static/js/2.d60c6668.chunk.js.LICENSE.txt"
+    "main.css": "/tic-tac-toe-bykate/public/index.html/static/css/main.a1e39da0.chunk.css",
+    "main.js": "/tic-tac-toe-bykate/public/index.html/static/js/main.c8d1fab6.chunk.js",
+    "main.js.map": "/tic-tac-toe-bykate/public/index.html/static/js/main.c8d1fab6.chunk.js.map",
+    "runtime-main.js": "/tic-tac-toe-bykate/public/index.html/static/js/runtime-main.cf55c44a.js",
+    "runtime-main.js.map": "/tic-tac-toe-bykate/public/index.html/static/js/runtime-main.cf55c44a.js.map",
+    "static/js/2.d60c6668.chunk.js": "/tic-tac-toe-bykate/public/index.html/static/js/2.d60c6668.chunk.js",
+    "static/js/2.d60c6668.chunk.js.map": "/tic-tac-toe-bykate/public/index.html/static/js/2.d60c6668.chunk.js.map",
+    "index.html": "/tic-tac-toe-bykate/public/index.html/index.html",
+    "precache-manifest.c90852f35870f45710ba7236ca0a3608.js": "/tic-tac-toe-bykate/public/index.html/precache-manifest.c90852f35870f45710ba7236ca0a3608.js",
+    "service-worker.js": "/tic-tac-toe-bykate/public/index.html/service-worker.js",
+    "static/css/main.a1e39da0.chunk.css.map": "/tic-tac-toe-bykate/public/index.html/static/css/main.a1e39da0.chunk.css.map",
+    "static/js/2.d60c6668.chunk.js.LICENSE.txt": "/tic-tac-toe-bykate/public/index.html/static/js/2.d60c6668.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5fbcf153.js",
+    "static/js/runtime-main.cf55c44a.js",
     "static/js/2.d60c6668.chunk.js",
     "static/css/main.a1e39da0.chunk.css",
     "static/js/main.c8d1fab6.chunk.js"
